@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <form class="form">
+      <div>
+        <p for="firstName">Имя</p>
+        <input type="text" id="firstName" name="firstName" pattern="[A-Za-zА-яа-я]{3,15}" required>
+      </div>
+      <div class="error__mesage" id="firstNameError">Пожалуйста, введите корректное имя.</div>
+      <div>
+        <p for="lastName">Фамилия</p>
+        <input type="text" id="lastName" name="lastName" pattern="[A-Za-zА-яа-я]{3,15}" required>
+      </div>
+      <div class="error__mesage" id="lastNameError">Пожалуйста, введите корректную фамилию.</div>
+      <div>
+        <p for="email">Почта</p>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+      </div>
+      <div class="error__mesage" id="emailError">Пожалуйста, введите корректную электронную почту.</div>
+      <div>
+        <p for="phone">Номер телефона</p>
+        <input type="tel" id="phone" name="phone" pattern="\+7\d{9}" required value="+7">
+      </div>
+      <div class="error__mesage" id="phoneError">Пожалуйста, введите корректный номер телефона.</div>
+      <div>
+        <p for="message">Поле ввода текста</p>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn">Отправить</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
